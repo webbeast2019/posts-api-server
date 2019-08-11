@@ -3,7 +3,7 @@ const app = express();
 const Joi = require('@hapi/joi');
 const fs = require('fs');
 
-//load Data from DB
+// load Data from DB file
 let posts = null;
 const inputFileName = 'db.json';
 fs.readFile(inputFileName, 'utf8', function (err, data) {
