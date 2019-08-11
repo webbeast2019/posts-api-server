@@ -1,0 +1,17 @@
+{
+  "name": "fakebook-server",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "nodemonConfig": {
+    "delay": 1000
+  },
+  "dependencies": {
+    "@hapi/joi": "^15.1.0",
+    "express": "~4.16.1",
+    "nodemon": "^1.19.1"
+  }
+}
