@@ -11,5 +11,18 @@ app.post('/api/posts',(req,res)=>{
     });
 });
 
+app.get('/api/posts', (req, res) => {
+    dbService.getAllPosts((data) => {
+        res.send(data)
+    })
+});
+
+app.get('/api/posts/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    dbService.getPostById(id, (data) => {
+        res.send(data)
+    })
+});
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on http://localhost:${port}/`));
